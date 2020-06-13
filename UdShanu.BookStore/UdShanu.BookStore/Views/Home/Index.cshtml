@@ -1,30 +1,94 @@
-﻿
+﻿@*@{
+        Layout = null;
+    }*@
 @{
-    Layout = null;
+    dynamic data = ViewBag.Data;
+
+    var bookinfo = @ViewData["book"] as BookModel;
+
+    ViewData["Title"] = "Home";
+}
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1>Welcome to BookStore. @ViewBag.Title</h1>
+        <p class="lead text-muted">
+            Dynamic = @data.Id @data.Name <br />
+            Type = @ViewBag.Type.Id @ViewBag.Type.Author <br />
+            This is test pharagraph text.
+        </p>
+        <hr />
+        <p>
+            View Data <br />
+            Property1 = @ViewData["Property1"] <br />
+            BookModel = ID: @bookinfo.Id, Author: @bookinfo.Author
+        </p>
+        <hr />
+        <p>
+            View Data Attribute <br />
+            View Data As Attribute : @ViewData["CustomProperty"]
+        </p>
+        <p>
+            <a href="#" class="btn btn-primary my-2">Search books</a>
+        </p>
+    </div>
+</section>
+
+<div class="py-5 bg-light">
+    <div class="container">
+        <h3 class="h3">Top Books</h3>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns=""></svg>
+                    <div class="card-body ">
+                        <p class="card-text">This section will be used to display the short description of book</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-sm btn-outline-secondary">View details</a>
+                            </div>
+                            <small class="text-muted">Author name</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns=""></svg>
+                    <div class="card-body ">
+                        <p class="card-text">This section will be used to display the short description of book</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-sm btn-outline-secondary">View details</a>
+                            </div>
+                            <small class="text-muted">Author name</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns=""></svg>
+                    <div class="card-body ">
+                        <p class="card-text">This section will be used to display the short description of book</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-sm btn-outline-secondary">View details</a>
+                            </div>
+                            <small class="text-muted">Author name</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            //alert("Home is ready.");
+        });
+    </script>
 }
 
-<!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
-    <link href="~/css/site.css" rel="stylesheet" />
-</head>
-<body class="container">
-
-    <img src="~/images/My.png" class="logo" alt="logo" />
-    <img src="~/MyStaticFiles/dummy.jpg" class="logo" alt="dummy" />
-    <input type="button" value="Click Me" class="btn btn-danger" />
-
-    <h1 class="h1">Wellcome to book store application.</h1>
-    <p>This is the home page of our book store application.</p>
-</body>
-<script src="~/lib/jquery/jquery.js"></script>
-</html>
-<script>
-    $(document).ready(function () {
-        alert("Page Loaded.");
-    });
-</script>

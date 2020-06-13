@@ -27,11 +27,12 @@ namespace UdShanu.BookStore.Repository
         {
             return new List<BookModel>
             {
-                new BookModel(){Id = 1, Title = "C#", Author = "Roshan" },
-                new BookModel(){Id = 2, Title = "Java", Author = "Manoj" },
-                new BookModel(){Id = 3, Title = "PHP", Author = "Gunarathna" },
-                new BookModel(){Id = 4, Title = "Angular", Author = "Shanu" },
-                new BookModel(){Id = 5, Title = "React", Author = "mano" }
+                new BookModel(){Id = 1, Title = "MVC", Author = "Roshan", Description = "This is the description of MVC book.", Category = "Programming", Language = "English", TotalPages = 134},
+                new BookModel(){Id = 2, Title = "Dot Net Core", Author = "Manoj", Description = "This is the description of Dot Net Core book.", Category = "Framework", Language = "Chinese", TotalPages = 567 },
+                new BookModel(){Id = 3, Title = "C#", Author = "Gunarathna", Description = "This is the description of C# book.", Category = "Developer", Language = "Hindi", TotalPages = 897 },
+                new BookModel(){Id = 4, Title = "Java", Author = "Shanu", Description = "This is the description of Java book.", Category = "Concept", Language = "English", TotalPages = 564 },
+                new BookModel(){Id = 5, Title = "PHP", Author = "mano", Description = "This is the description of Php book.", Category = "Programming", Language = "English", TotalPages = 100 },
+                new BookModel(){Id = 6, Title = "Azure Devops", Author = "ud", Description = "This is the description of Azure Devops book.", Category = "Devops", Language = "English", TotalPages = 800 }
             };
         }
     }
